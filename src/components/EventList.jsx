@@ -13,7 +13,7 @@ const EventList = () => {
   const fetchEvents = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:5000/events?city=${city}`);
+      const response = await axios.get(`https://event-scraper-server.onrender.com/events?city=${city}`);
       setEvents(response.data);
     } catch (err) {
       console.error('Error fetching events:', err);
